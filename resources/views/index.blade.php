@@ -95,20 +95,7 @@
 
             <!-- Sidebar -->
             <div class="col-lg-4 sidebar mt-4 mt-lg-0">
-                <button class="btn btn-block"><i class="fas fa-home"></i> Home</button>
-                <button class="btn btn-block"><i class="fas fa-newspaper"></i> Current Issue</button>
-                <button class="btn btn-block"><i class="fas fa-users"></i> Editorial Board</button>
-                <button class="btn btn-block"><i class="fas fa-book"></i> Guidelines</button>
-                <button class="btn btn-block"><i class="fas fa-search"></i> Indexing & Abstracting</button>
-                <button class="btn btn-block"><i class="fas fa-info-circle"></i> About</button>
-
-                <div class="mt-4 p-3 bg-light border rounded text-center">
-                    <h5>Q3</h5>
-                    <p class="mb-1">Computer Science (miscellaneous)</p>
-                    <small>SJR 2024: 0.31</small><br>
-                    <img src="https://www.scimagojr.com/journal_img.php?id=19700175163" alt="SJR badge"
-                        class="img-fluid mt-2" />
-                </div>
+                @include('common.sidebar')
             </div>
         </div>
     </div>

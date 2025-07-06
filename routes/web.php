@@ -23,6 +23,24 @@ use App\Http\Controllers\FormController;
 
 Route::get('/', [IndexController::class, 'index']);
 
+
+//JIT
+Route::get('guidelines', function () {
+    return view('JIT.guidelines');
+});
+Route::get('editorial-board', function () {
+    return view('JIT.editorial-board');
+});
+Route::get('indexed-abstract', function () {
+    return view('JIT.indexed-abstract');
+});
+Route::get('about-jit', function () {
+    return view('JIT.about');
+});
+
+
+//JIT
+
 Route::get('journal/{slug}', [JournalController::class, 'journal']);
 Route::get('journal/{slug}/{params}', [JournalController::class, 'journalParams']);
 // Route::get('/about-us', function () {
