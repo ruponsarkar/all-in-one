@@ -37,6 +37,12 @@ Route::get('indexed-abstract', function () {
 Route::get('about-jit', function () {
     return view('JIT.about');
 });
+Route::get('faq', function () {
+    return view('JIT.faq');
+});
+Route::get('archive', function () {
+    return view('JIT.archive');
+});
 
 
 //JIT

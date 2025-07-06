@@ -18,7 +18,7 @@
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
-                                        Tian Luo
+                                        Scopus 
                                     </strong>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
-                                        Tian Luo
+                                        RoMeo 
                                     </strong>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
-                                        Tian Luo
+                                        Proquest 
                                     </strong>
                                 </div>
                             </div>
@@ -45,7 +45,34 @@
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
-                                        Tian Luo
+                                        Google Scholar 
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="border  rounded text-center p-3 shadow-lg">
+                                <div>
+                                    <strong>
+                                       EBSCO 
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="border  rounded text-center p-3 shadow-lg">
+                                <div>
+                                    <strong>
+                                        Index Copernicus 
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="border  rounded text-center p-3 shadow-lg">
+                                <div>
+                                    <strong>
+                                        DHET 
                                     </strong>
                                 </div>
                             </div>

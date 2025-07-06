@@ -6,6 +6,8 @@
     <a href="guidelines" class="btn btn-block"><i class="fas fa-book"></i> Guidelines</a>
     <a href="indexed-abstract" class="btn btn-block"><i class="fas fa-search"></i> Indexing & Abstracting</a>
     <a href="about-jit" class="btn btn-block"><i class="fas fa-info-circle"></i> About</a>
+    <a href="faq" class="btn btn-block"><i class="fas fa-question"></i> FAQ</a>
+    <a href="archive" class="btn btn-block"><i class="fas fa-archive"></i> Archive</a>
 
     <div class="mt-4 p-3 bg-light border rounded text-center">
         <p class="mb-1">Computer Science (miscellaneous)</p>
