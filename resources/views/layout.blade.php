@@ -19,12 +19,12 @@
 
     <meta name="description" content="" />
 
-     <!-- Bootstrap 4 CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-     <!-- Font Awesome Free -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
- 
+    <!-- Font Awesome Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
 
     <title>@yield('title')</title>
 
@@ -109,7 +109,7 @@
         <!-- Sticky Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     Journal of Information Technology Education: IIP
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -119,10 +119,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a class="nav-link" href="/register"><i class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Sign Up</a>
+                            <a class="nav-link" href="/submission"><i class="fas fa-user-plus"></i> Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -154,9 +154,9 @@
         <div class="container">
             <p>ISSN: 2165-316X</p>
             <p>
-                <a href="#">Legal Disclaimer</a> |
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Ethics Policy</a>
+                <a href="/legal">Legal Disclaimer</a> |
+                <a href="/privacy">Privacy Policy</a> |
+                <a href="/ethic-policy">Ethics Policy</a>
             </p>
             <p>
                 All articles of this open access journal are licensed under the
@@ -176,9 +176,9 @@
 
 
 
-  <!-- Bootstrap + jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap + jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

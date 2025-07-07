@@ -33,7 +33,7 @@
                         collegial. Our published authors have the advantage of the widespread readership that comes from
                         publishing all articles online within a few weeks of acceptance. This approach ensures that
                         JITE: Innovations articles are read and cited by the largest possible potential
-                        audience………………………………..
+                        audience…
                     </p>
                 </div>
 
@@ -48,17 +48,16 @@
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold"
                                         style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i> The Road to Become a Legitimate
-                                        Scholar: A Case Study of International PhD Students in Science and Engineering
+                                        <i class="fas fa-file-alt text-primary"></i>  Putting Team-Based Learning into Practice: Database Class Results
                                     </h5>
                                     <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i> Pia Bøgelund, Erik de Graaff
+                                        <i class="fas fa-user"></i> Brad Kalitherine
                                     </p>
                                     <p class="card-text">
                                         <span class="badge badge-info p-2">
                                             <i class="fas fa-link"></i>
-                                            <a href="#"
-                                                class="text-white text-decoration-none">doi.org/10.28945/2325</a>
+                                            <a href="/articles/01-07.pdf"
+                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_01-07</a>
                                         </span>
                                     </p>
                                 </div>
@@ -71,17 +70,56 @@
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold"
                                         style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i> Factors Impacting Teachers'
-                                        Adoption of Mobile Learning
+                                        <i class="fas fa-file-alt text-primary"></i> Softwear development in Research course activates
                                     </h5>
                                     <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i> Kathryn Mac Callum, Lynn Jeffrey, Kinshuk
+                                        <i class="fas fa-user"></i> David Conway
                                     </p>
                                     <p class="card-text">
                                         <span class="badge badge-info p-2">
                                             <i class="fas fa-link"></i>
-                                            <a href="#"
-                                                class="text-white text-decoration-none">doi.org/10.28945/2325</a>
+                                            <a href="/articles/08-13.pdf"
+                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_08-13</a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold"
+                                        style="font-size: 1.1rem; line-height: 1.5;">
+                                        <i class="fas fa-file-alt text-primary"></i> The Perspective of Senior Academic Staff on Incorporating Technology into Online Teaching and Learning
+                                    </h5>
+                                    <p class="card-text text-muted mb-2">
+                                        <i class="fas fa-user"></i>  Haseeb Al Basir 
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="badge badge-info p-2">
+                                            <i class="fas fa-link"></i>
+                                            <a href="/articles/14-21.pdf"
+                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_14-21</a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold"
+                                        style="font-size: 1.1rem; line-height: 1.5;">
+                                        <i class="fas fa-file-alt text-primary"></i> ONLINE LEARNING INTEGRATION OF TECHNOLOGY IN HS SCHOOL
+                                    </h5>
+                                    <p class="card-text text-muted mb-2">
+                                        <i class="fas fa-user"></i>  Dr. Omer Albaik
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="badge badge-info p-2">
+                                            <i class="fas fa-link"></i>
+                                            <a href="/articles/22-32.pdf"
+                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_21-32</a>
                                         </span>
                                     </p>
                                 </div>

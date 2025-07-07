@@ -26,24 +26,49 @@ Route::get('/', [IndexController::class, 'index']);
 
 
 //JIT
-Route::get('guidelines', [JITController::class, 'guidelines']);
-Route::get('editorial-board', [JITController::class, 'editorialBoard']);
-Route::get('indexed-abstract', [JITController::class, 'indexedAbstract']);
-Route::get('about-us', [JITController::class, 'aboutUs']);
+Route::get('guidelines', function () {
+    return view('JIT.guidelines');
+});
+Route::get('editorial-board', function () {
+    return view('JIT.editorial-board');
+});
+Route::get('indexed-abstract', function () {
+    return view('JIT.indexed-abstract');
+});
+Route::get('about-jit', function () {
+    return view('JIT.about');
+});
+Route::get('faq', function () {
+    return view('JIT.faq');
+});
+Route::get('archive', function () {
+    return view('JIT.archive');
+});
+Route::get('current-issue', function () {
+    return view('JIT.current-issue');
+});
+Route::get('maintenance', function () {
+    return view('JIT.maintenance');
+});
 
-// Route::get('guidelines', function () {
-//     return view('JIT.guidelines');
-// });
-
-// Route::get('editorial-board', function () {
-//     return view('JIT.editorial-board');
-// });
-// Route::get('indexed-abstract', function () {
-//     return view('JIT.indexed-abstract');
-// });
-// Route::get('about-jit', function () {
-//     return view('JIT.about');
-// });
+Route::get('ethic-policy', function () {
+    return view('JIT.ethic-policy');
+});
+Route::get('ethic-policy', function () {
+    return view('JIT.ethic-policy');
+});
+Route::get('privacy', function () {
+    return view('JIT.privacy');
+});
+Route::get('submission', function () {
+    return view('JIT.submission');
+});
+Route::get('register', function () {
+    return view('JIT.register');
+});
+Route::get('legal', function () {
+    return view('JIT.legal');
+});
 
 
 //JIT
