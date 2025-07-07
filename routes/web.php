@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\JournalController;
 use App\Http\Controllers\adminPanelController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\JITController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,18 +26,24 @@ Route::get('/', [IndexController::class, 'index']);
 
 
 //JIT
-Route::get('guidelines', function () {
-    return view('JIT.guidelines');
-});
-Route::get('editorial-board', function () {
-    return view('JIT.editorial-board');
-});
-Route::get('indexed-abstract', function () {
-    return view('JIT.indexed-abstract');
-});
-Route::get('about-jit', function () {
-    return view('JIT.about');
-});
+Route::get('guidelines', [JITController::class, 'guidelines']);
+Route::get('editorial-board', [JITController::class, 'editorialBoard']);
+Route::get('indexed-abstract', [JITController::class, 'indexedAbstract']);
+Route::get('about-us', [JITController::class, 'aboutUs']);
+
+// Route::get('guidelines', function () {
+//     return view('JIT.guidelines');
+// });
+
+// Route::get('editorial-board', function () {
+//     return view('JIT.editorial-board');
+// });
+// Route::get('indexed-abstract', function () {
+//     return view('JIT.indexed-abstract');
+// });
+// Route::get('about-jit', function () {
+//     return view('JIT.about');
+// });
 
 
 //JIT
