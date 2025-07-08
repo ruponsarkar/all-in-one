@@ -45,6 +45,18 @@ Route::get('archive', function () {
 });
 
 
+// footer link
+
+Route::get('privacy-policy', function () {
+    return view('privacy_policy');
+});
+Route::get('ethics-policy', function () {
+    return view('ethics_policy');
+});
+Route::get('legal-disclaimer', function () {
+    return view('legal_disclaimer');
+});
+
 //JIT
 
 Route::get('journal/{slug}', [JournalController::class, 'journal']);

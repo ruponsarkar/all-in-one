@@ -154,9 +154,9 @@
         <div class="container">
             <p>ISSN: 2165-316X</p>
             <p>
-                <a href="#">Legal Disclaimer</a> |
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Ethics Policy</a>
+                <a href="legal-disclaimer">Legal Disclaimer</a> |
+                <a href="privacy-policy">Privacy Policy</a> |
+                <a href="ethics-policy">Ethics Policy</a>
             </p>
             <p>
                 All articles of this open access journal are licensed under the
