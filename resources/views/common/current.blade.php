@@ -1,6 +1,6 @@
 <div class="row justify-content-center py-3">
     <div class="col-lg-12 details text-center p-2">
-        <h3>Issue 10</h3>
+        <h3>Issue 10, Issue 01</h3>
     </div>
 
     <div class="col-lg-12 py-3">

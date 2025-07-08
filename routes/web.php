@@ -69,6 +69,9 @@ Route::get('register', function () {
 Route::get('legal', function () {
     return view('JIT.legal');
 });
+Route::get('contact-us', function () {
+    return view('JIT.contact-us');
+});
 
 
 //JIT
@@ -108,7 +111,7 @@ Route::get('authorGuidlines', [IndexController::class, 'authorGuidlines']);
 
 Route::get('editorsGuidlines', [IndexController::class, 'editorsGuidlines']);
 Route::get('reviewersGuidlines', [IndexController::class, 'reviewersGuidlines']);
-Route::get('contactUs', [IndexController::class, 'contactUs']);
+// Route::get('contactUs', [IndexController::class, 'contactUs']);
 Route::get('conference' , [adminPanelController::class,'conference']);
 Route::get('PublicationEthicsandMalpracticeStatement', [IndexController::class, 'PublicationEthicsandMalpracticeStatement']);
 Route::get('ManuscriptPreparationGuidelines', [IndexController::class, 'ManuscriptPreparationGuidelines']);
