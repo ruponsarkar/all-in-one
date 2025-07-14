@@ -29,21 +29,31 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('guidelines', function () {
     return view('JIT.guidelines');
 });
-Route::get('editorial-board', function () {
-    return view('JIT.editorial-board');
-});
-Route::get('indexed-abstract', function () {
-    return view('JIT.indexed-abstract');
-});
+Route::get('editorial-board/{slug}', [JITController::class, 'editorialBoard']);
+
+Route::get('indexed-abstract/{slug}', [JITController::class, 'indexedAbstract']);
+
+Route::get('archive/{slug}', [JITController::class, 'archive']);
+// Route::get('issues/{vol}', [JITController::class, 'issues']);
+Route::get('issues/{slug}/{vol}', [JITController::class, 'issues'])->name('issues.all');
+Route::get('current/{slug}', [JITController::class, 'issues'])->name('issues.current');
+
+
+// Route::get('editorial-board', function () {
+//     return view('JIT.editorial-board');
+// });
+// Route::get('indexed-abstract', function () {
+//     return view('JIT.indexed-abstract');
+// });
 Route::get('about-jit', function () {
     return view('JIT.about');
 });
 Route::get('faq', function () {
     return view('JIT.faq');
 });
-Route::get('archive', function () {
-    return view('JIT.archive');
-});
+// Route::get('archive', function () {
+//     return view('JIT.archive');
+// });
 Route::get('current-issue', function () {
     return view('JIT.current-issue');
 });
@@ -90,7 +100,7 @@ Route::get('/about-us', [JournalController::class, 'aboutUs']);
 Route::get('journal-details/{id}', [journalController::class, 'Journals_details']);
 
 Route::get('all_issues/{id}', [JournalController::class, 'allissuesList']);
-Route::get('issues/{id}', [journalController::class, 'allIssues']);
+// Route::get('issues/{id}', [journalController::class, 'allIssues']);
 
 Route::get('countDownload/{id}', [JournalController::class, 'countDownload']);
 

@@ -42,89 +42,33 @@
                         <i class="fas fa-book-reader text-primary"></i> Recent Articles
                     </h3>
                     <div class="row mt-3">
-                        <!-- Article 1 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold"
-                                        style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i>  Putting Team-Based Learning into Practice: Database Class Results
-                                    </h5>
-                                    <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i> Brad Kalitherine
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="badge badge-info p-2">
-                                            <i class="fas fa-link"></i>
-                                            <a href="/articles/01-07.pdf"
-                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_01-07</a>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Article 2 -->
+                        @foreach ($latestArticle as $key => $data)
                         <div class="col-md-6 mb-4">
                             <div class="card h-100 shadow-sm border-0">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold"
                                         style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i> Softwear development in Research course activates
+                                        <i class="fas fa-file-alt text-primary"></i> {{ Str::limit($data->name, 70) }}
                                     </h5>
                                     <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i> David Conway
+                                        <i class="fas fa-user"></i>  {{ Str::limit($data->aname, 30) }}
                                     </p>
                                     <p class="card-text">
                                         <span class="badge badge-info p-2">
                                             <i class="fas fa-link"></i>
-                                            <a href="/articles/08-13.pdf"
-                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_08-13</a>
+                                            <a href={{ URL('/articles/' . $data->file) }}
+                                                class="text-white text-decoration-none">
+                                                {{ $data->doi }}
+                                            </a>
                                         </span>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold"
-                                        style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i> The Perspective of Senior Academic Staff on Incorporating Technology into Online Teaching and Learning
-                                    </h5>
-                                    <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i>  Haseeb Al Basir 
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="badge badge-info p-2">
-                                            <i class="fas fa-link"></i>
-                                            <a href="/articles/14-21.pdf"
-                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_14-21</a>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold"
-                                        style="font-size: 1.1rem; line-height: 1.5;">
-                                        <i class="fas fa-file-alt text-primary"></i> ONLINE LEARNING INTEGRATION OF TECHNOLOGY IN HS SCHOOL
-                                    </h5>
-                                    <p class="card-text text-muted mb-2">
-                                        <i class="fas fa-user"></i>  Dr. Omer Albaik
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="badge badge-info p-2">
-                                            <i class="fas fa-link"></i>
-                                            <a href="/articles/22-32.pdf"
-                                                class="text-white text-decoration-none">10.25257/jiteiip_10_1_21-32</a>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
+                    
                     </div>
                 </div>
 

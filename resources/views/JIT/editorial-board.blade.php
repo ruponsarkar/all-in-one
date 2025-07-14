@@ -14,24 +14,29 @@
                         </div>
 
 
-                        <div class="col-lg-6">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Tian Luo
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
+                        @foreach ($Chief_editors as $data)
+                            <div class="col-lg-6">
+                                <div class="border  rounded text-center p-3 shadow-lg">
+                                    <div>
+                                        <strong>
+                                            {{ $data->name }}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <i>
 
-                                        Editor in Chief
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    Old Dominion University, United States
+                                            Editor in Chief
+                                        </i>
+                                    </div>
+                                    <div class="text-muted">
+                                        {{ $data->university }}
+                                    </div>
+                                    <div class="text-muted">
+                                        {{ $data->details }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -43,7 +48,31 @@
                             <h3>Associate Editors</h3>
                         </div>
 
-                        <div class="col-lg-6 py-3">
+                        @foreach ($ass_editors as $data)
+                            <div class="col-lg-6 py-3">
+                                <div class="border  rounded text-center p-3 shadow-lg">
+                                    <div>
+                                        <strong>
+                                            {{ $data->name }}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <i>
+
+                                            Associate Editor in Chief
+                                        </i>
+                                    </div>
+                                    <div class="text-muted">
+                                        {{ $data->university }}
+                                    </div>
+                                    <div class="text-muted">
+                                        {{ $data->details }}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                        {{-- <div class="col-lg-6 py-3">
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
@@ -60,120 +89,10 @@
                                     Universityof Peloponnese, Greece
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Dr Man Fung (Kelvin) LO
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
+                        </div> --}}
 
-                                        Associate Editor in Chief
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    The University of Hong Kong, Hong
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Dr Krassie Petrova
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
+                      
 
-                                        Associate Editor in Chief
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    Auckland University of Technology, New Zealand
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Dr Donna Jean Satterlee
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
-
-                                        Associate Editor in Chief
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    University of Maryland Eastern Shore, United States
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Dr Janice Whatley
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
-
-                                        Editor
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    Manchester Metropolitan University, United Kingdom
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Vishal Shah
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
-
-                                       Associate Editor
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    Central Michigan University, United States
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 py-3">
-                            <div class="border  rounded text-center p-3 shadow-lg">
-                                <div>
-                                    <strong>
-                                        Dr Joko Slamet
-                                    </strong>
-                                </div>
-                                <div>
-                                    <i>
-
-                                        Associate Editor
-                                    </i>
-                                </div>
-                                <div class="text-muted">
-                                    Universitas Negeri Malang, Indonesia
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
 

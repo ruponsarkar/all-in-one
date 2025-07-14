@@ -13,97 +13,20 @@
                             <h3>Archive</h3>
                         </div>
 
+                        @foreach($volumes as $ar)
+
                         <div class="col-lg-12 py-3">
                             <div class="border  rounded p-3 shadow-lg">
-                                <a href="/current-issue">
+                                <a href="/issues/MRSJMRS/{{$ar->short}}">
                                     <strong>
-                                       Volume 10 (Current Issue)
+                                      {{$ar->name}}
                                     </strong>
                                 </a>
                               
                             </div>
                         </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 09
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 08
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 07
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 06
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 05
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 04
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 03
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 02
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 py-3">
-                            <div class="border  rounded p-3 shadow-lg">
-                                <a href="/maintenance">
-                                    <strong>
-                                       Volume 01
-                                    </strong>
-                                </a>
-                            </div>
-                        </div>
+
+                        @endforeach
                        
                         
                     </div>

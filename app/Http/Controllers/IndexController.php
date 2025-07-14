@@ -17,33 +17,41 @@ use DB;
 class IndexController extends Controller
 {
     //
-    public function index(){
+    public function index()
+    {
         $latestArticle = articles::where('status', 1)->limit(4)->orderBy("id", "desc")->get();
         $latestArticleThree = articles::where('status', 1)->limit(3)->orderBy("id", "desc")->get();
         $journals = journal::where('active', 1)->get();
 
         $indexings = indexings::where('active', 1)->get();
-        
+
 
         //for counter section
-        
-        
+
+
         $v = new visitor;
         $v->count = 1;
         $v->ip_address = \Request::ip();
         $v->save();
-        
-        
-         $countJournal = journal::count('j_id');
-         $countArticle = articles::where('status', 1)->count('id');
-         $countDownload = articles::sum('count');
-         $countVisitor = visitor::sum('count');
 
-        return view('index', ['latestArticle' => $latestArticle, 'latestArticleThree' => $latestArticleThree, 'journals'=>$journals, 
-        'indexings'=>$indexings,
-        'countJournal'=>$countJournal, 'countArticle'=>$countArticle, 'countDownload'=>$countDownload, 'countVisitor'=>$countVisitor]);
+
+        $countJournal = journal::count('j_id');
+        $countArticle = articles::where('status', 1)->count('id');
+        $countDownload = articles::sum('count');
+        $countVisitor = visitor::sum('count');
+
+        return view('index', [
+            'latestArticle' => $latestArticle,
+            'latestArticleThree' => $latestArticleThree,
+            'journals' => $journals,
+            'indexings' => $indexings,
+            'countJournal' => $countJournal,
+            'countArticle' => $countArticle,
+            'countDownload' => $countDownload,
+            'countVisitor' => $countVisitor
+        ]);
     }
-   
+
     function search(Request $request)
     {
         // return $request->all();
@@ -53,106 +61,125 @@ class IndexController extends Controller
             return response()->json(['error' => 'Query parameter is required'], 400);
         }
 
-        $results = manuscript_status::where('muuid', 'LIKE', "%{$query}%")->where('status' , 0)->first(); // Adjust the field 'name' based on your model
+        $results = manuscript_status::where('muuid', 'LIKE', "%{$query}%")->where('status', 0)->first(); // Adjust the field 'name' based on your model
 
         return response()->json($results);
     }
-   
 
-   function manuscript(){
+
+    function manuscript()
+    {
         $journals = journal::get();
-        return view('manuscript', ['journals'=>$journals]);
+        return view('manuscript', ['journals' => $journals]);
     }
 
-    function viewmanuscript(Request $request , $id){ 
-        $manuStatus = manuscript_status::where('muuid' , $id)->get();
+    function viewmanuscript(Request $request, $id)
+    {
+        $manuStatus = manuscript_status::where('muuid', $id)->get();
 
-        $getManufullDetails = manuscripts::where('muuid',   $manuStatus[0]->muuid)->first();
-        return view('view-manuscript', ['manudata'=>$manuStatus, 'getManufullDetails'=>$getManufullDetails]);
+        $getManufullDetails = manuscripts::where('muuid', $manuStatus[0]->muuid)->first();
+        return view('view-manuscript', ['manudata' => $manuStatus, 'getManufullDetails' => $getManufullDetails]);
         // return redirect()->back();
     }
-    
-    
-       function refund(){
+
+
+    function refund()
+    {
         return view('refund');
     }
 
-    
 
-    function Peer(){
+
+    function Peer()
+    {
         return view('Peer');
     }
 
-    function ethics(){
+    function ethics()
+    {
         return view('Ethics');
     }
 
-    function about(){
+    function about()
+    {
         return view('about');
     }
-    
-    
-    function contact(){
+
+
+    function contact()
+    {
         return view('contact');
     }
 
-    function authorGuidlines(){
+    function authorGuidlines()
+    {
 
         $data = DB::table('pages')->where('type', 'author')->orderBy('id', 'desc')->first();
-        
-        return view('authorGuidlines', ['data'=>$data]);
+
+        return view('authorGuidlines', ['data' => $data]);
     }
-    
-    function editorsGuidlines(){
-        
+
+    function editorsGuidlines()
+    {
+
         $data = DB::table('pages')->where('type', 'editor')->orderBy('id', 'desc')->first();
-        return view('editorsGuidlines',  ['data'=>$data]);
+        return view('editorsGuidlines', ['data' => $data]);
     }
-    function reviewersGuidlines(){
+    function reviewersGuidlines()
+    {
         $data = DB::table('pages')->where('type', 'reviewer')->orderBy('id', 'desc')->first();
-        return view('reviewersGuidlines',  ['data'=>$data]);
+        return view('reviewersGuidlines', ['data' => $data]);
     }
-    
-    
-    function aboutUs(){
+
+
+    function aboutUs()
+    {
         $data = DB::table('pages')->where('type', 'about')->orderBy('id', 'desc')->first();
-        return view('aboutUs',  ['data'=>$data]);
+        return view('aboutUs', ['data' => $data]);
     }
-    function contactUs(){
+    function contactUs()
+    {
         $data = DB::table('pages')->where('type', 'contact')->orderBy('id', 'desc')->first();
-        return view('contactUs',  ['data'=>$data]);
+        return view('contactUs', ['data' => $data]);
     }
-    function PublicationEthicsandMalpracticeStatement(){
+    function PublicationEthicsandMalpracticeStatement()
+    {
         $data = DB::table('pages')->where('type', 'PublicationEthicsandMalpracticeStatement')->orderBy('id', 'desc')->first();
-        return view('PublicationEthicsandMalpracticeStatement',  ['data'=>$data]);
+        return view('PublicationEthicsandMalpracticeStatement', ['data' => $data]);
     }
-    function ManuscriptPreparationGuidelines(){
+    function ManuscriptPreparationGuidelines()
+    {
         $data = DB::table('pages')->where('type', 'ManuscriptPreparationGuidelines')->orderBy('id', 'desc')->first();
-        return view('ManuscriptPreparationGuidelines',  ['data'=>$data]);
+        return view('ManuscriptPreparationGuidelines', ['data' => $data]);
     }
-    function ResearchGuidelines(){
+    function ResearchGuidelines()
+    {
         $data = DB::table('pages')->where('type', 'ResearchGuidelines')->orderBy('id', 'desc')->first();
-        return view('ResearchGuidelines',  ['data'=>$data]);
+        return view('ResearchGuidelines', ['data' => $data]);
     }
-    function PeerReviewPolicy(){
+    function PeerReviewPolicy()
+    {
         $data = DB::table('pages')->where('type', 'PeerReviewPolicy')->orderBy('id', 'desc')->first();
-        return view('PeerReviewPolicy',  ['data'=>$data]);
+        return view('PeerReviewPolicy', ['data' => $data]);
     }
-    function APAStyle(){
+    function APAStyle()
+    {
         $data = DB::table('pages')->where('type', 'APAStyle')->orderBy('id', 'desc')->first();
-        return view('APAStyle',  ['data'=>$data]);
+        return view('APAStyle', ['data' => $data]);
     }
-    function Writingagoodresearchpaper(){
+    function Writingagoodresearchpaper()
+    {
         $data = DB::table('pages')->where('type', 'Writingagoodresearchpaper')->orderBy('id', 'desc')->first();
-        return view('Writingagoodresearchpaper',  ['data'=>$data]);
+        return view('Writingagoodresearchpaper', ['data' => $data]);
     }
-    function GoogleLanguageTranslator(){
+    function GoogleLanguageTranslator()
+    {
         $data = DB::table('pages')->where('type', 'GoogleLanguageTranslator')->orderBy('id', 'desc')->first();
-        return view('GoogleLanguageTranslator',  ['data'=>$data]);
+        return view('GoogleLanguageTranslator', ['data' => $data]);
     }
-    
-    
-    
+
+
+
 
 
 }

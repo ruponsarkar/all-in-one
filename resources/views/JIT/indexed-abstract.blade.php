@@ -13,17 +13,20 @@
                             <h3>Indexed Abstract</h3>
                         </div>
 
-
+                        @foreach($indexing as $index)
                         <div class="col-lg-4 py-3">
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
-                                        Scopus 
+                                        {{$index->name}}
                                     </strong>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 py-3">
+                        @endforeach
+
+
+                        {{-- <div class="col-lg-4 py-3">
                             <div class="border  rounded text-center p-3 shadow-lg">
                                 <div>
                                     <strong>
@@ -76,7 +79,7 @@
                                     </strong>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
 
 
