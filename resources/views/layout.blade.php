@@ -124,10 +124,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/register"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a class="nav-link" href="/user-login"><i class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/submission"><i class="fas fa-user-plus"></i> Sign Up</a>
+                            <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -142,7 +142,9 @@
 
     <!-- navbar -->
     {{-- <div class="container-fluid"> --}}
-    @yield('content')
+        <div style="min-height: 80vh">
+            @yield('content')
+        </div>
     {{-- </div> --}}
 
 

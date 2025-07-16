@@ -73,9 +73,7 @@ Route::get('privacy', function () {
 Route::get('submission', function () {
     return view('JIT.submission');
 });
-Route::get('register', function () {
-    return view('JIT.register');
-});
+
 Route::get('legal', function () {
     return view('JIT.legal');
 });
@@ -152,7 +150,7 @@ Route::get('view-manuscript/{id}', [IndexController::class,'viewmanuscript'])->w
 
 Route::group(['middleware'=>['AuthCheck']], function(){
     
-    Route::get('login', [adminPanelController::class, 'login']);
+    // Route::get('login', [adminPanelController::class, 'login']);
     Route::get('admin_index', [adminPanelController::class, 'adminIndex']);
     Route::get('all-manuscript', [adminPanelController::class, 'allManuscript']);
     Route::get('receive-editors', [adminPanelController::class, 'allEditorsRequest']);
@@ -230,7 +228,7 @@ Route::group(['middleware'=>['AuthCheck']], function(){
 // Route::get('register', [adminPanelController::class, 'regis']);
 
  Route::post('check', [adminPanelController::class, 'check']);   
- Route::get('logout', [adminPanelController::class, 'logout']);
+//  Route::get('logout', [adminPanelController::class, 'logout']);
 
 Route::get('makeSlug', [adminPanelController::class, 'makeSlug']);
 

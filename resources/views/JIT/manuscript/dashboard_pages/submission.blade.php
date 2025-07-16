@@ -1,4 +1,3 @@
-@extends('layout') @section('title', 'Submission') @section('content')
 
 <style>
    .paper-form {
@@ -10,23 +9,6 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.05);
     }
 </style>
-
-  <!-- Login Section -->
-  <div class="container mt-5">
-    <div class="paper-form">
-      <h4 class="section-title">LOG IN</h4>
-      <form>
-        <div class="form-group">
-          <label>Username</label>
-          <input type="text" class="form-control" placeholder="Enter username" />
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" placeholder="Enter password" />
-        </div>
-      </form>
-    </div>
-  </div>
 
   <!-- Paper Submission Section -->
   <div class="container mt-4">
@@ -62,5 +44,3 @@
     </div>
   </div>
 
-
-  @endsection
