@@ -19,11 +19,22 @@ Route::get('/user-login', function () {
 Route::post('/user-login', [ManuscriptController::class, 'login']);
 
 Route::middleware(['auth.jwt'])->group(function () {
-
     Route::get('/user-dashboard', [ManuscriptController::class, 'dashboard']);
     Route::get('/profile', [ManuscriptController::class, 'profile']);
     Route::get('/logout', [ManuscriptController::class, 'logout']);
+    Route::post('/submission', [ManuscriptController::class, 'submission']);
 });
+
+
+
+
+// for admin dashboard 
+Route::get('/api/allSubmissions', [ManuscriptController::class, 'allSubmissions']);
+Route::get('/allSubmissions', function () {
+    return view('JIT.manuscript.for_admin.all_submissions');
+});
+
+Route::post('/api/addSubmissionStatus', [ManuscriptController::class, 'addSubmissionStatus']);
 
 
 

@@ -10,18 +10,19 @@ class AuthenticateWithJwtFromSession
 {
     public function handle(Request $request, Closure $next)
     {
-        if (session()->has('jwt_token')) {
+        $token = session('jwt_token') ?? $request->cookie('jwt_token');
+    
+        if ($token) {
             try {
-                JWTAuth::setToken(session('jwt_token'))->authenticate();
+                JWTAuth::setToken($token)->authenticate();
             } catch (\Exception $e) {
-                // return response()->json(['error' => 'Unauthorized'], 401);
-                return redirect('/user-login');
+                return redirect('/user-login')->with('error', 'Session expired, please login again.');
             }
         } else {
-            // return response()->json(['error' => 'Token not found in session'], 401);
-            return redirect('/user-login');
+            return redirect('/user-login')->with('error', 'Please login to continue.');
         }
-
+    
         return $next($request);
     }
+    
 }

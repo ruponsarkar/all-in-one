@@ -12,32 +12,51 @@
 
   <!-- Paper Submission Section -->
   <div class="container mt-4">
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+
     <div class="paper-form">
       <h4 class="section-title">Paper Submission</h4>
-      <form>
+      <form action="submission" method="post" enctype="multipart/form-data">
+        @csrf
         <div class="form-group">
           <label>Author Name</label>
-          <input type="text" class="form-control" placeholder="Author full name" />
+          <input type="text" class="form-control" name="author_name" placeholder="Author full name" />
         </div>
         <div class="form-group">
           <label>Paper Title</label>
-          <input type="text" class="form-control" placeholder="Title of the paper" />
+          <input type="text" class="form-control" name="paper_title" placeholder="Title of the paper" />
         </div>
         <div class="form-group">
           <label>Keywords</label>
-          <input type="text" class="form-control" placeholder="e.g. AI, Education, Technology" />
+          <input type="text" class="form-control" name="keywords" placeholder="e.g. AI, Education, Technology" />
         </div>
         <div class="form-group">
           <label>Abstract</label>
-          <textarea class="form-control" rows="6" placeholder="Enter your abstract here..."></textarea>
+          <textarea class="form-control" rows="6" name="abstract" placeholder="Enter your abstract here..."></textarea>
         </div>
         <div class="form-group">
           <label>Corresponding Email</label>
-          <input type="email" class="form-control" placeholder="example@email.com" />
+          <input type="email" class="form-control" name="corresponding_email" placeholder="example@email.com" />
         </div>
         <div class="form-group">
           <label>Upload File <span class="file-label">(Word file only)</span></label>
-          <input type="file" class="form-control" accept=".doc,.docx" />
+          <input type="file" class="form-control" name="file" accept=".pdf,.doc,.docx" />
         </div>
         <button type="submit" class="btn btn-primary btn-submit mt-3"><i class="fas fa-upload"></i> Submit Paper</button>
       </form>

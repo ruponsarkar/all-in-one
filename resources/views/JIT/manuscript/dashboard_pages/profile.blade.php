@@ -13,11 +13,29 @@
    <!-- Paper Submission Section -->
    <div class="container mt-4">
      <div class="paper-form">
-       <h4 class="section-title">Profile</h4>
-      
+       <h4 class="section-title">User Profile</h4>
+       @if($authUser)
+
        <div>
-        Name: 
+        <span class="font-weight-bold">  Name:  </span> <span> {{ $authUser->first_name }} {{ $authUser->last_name }}</span>
        </div>
+       <div>
+        <span class="font-weight-bold">  Email:  </span> <span> {{ $authUser->email }} </span>
+       </div>
+       <div>
+        <span class="font-weight-bold">  University:  </span> <span> {{ $authUser->university }} </span>
+       </div>
+       <div>
+        <span class="font-weight-bold">  Department:  </span> <span> {{ $authUser->department }} </span>
+       </div>
+       <div>
+        <span class="font-weight-bold">  City:  </span> <span> {{ $authUser->city }} </span>
+       </div>
+       <div>
+        <span class="font-weight-bold">  Country:  </span> <span> {{ $authUser->country }} </span>
+       </div>
+
+       @endif
      </div>
    </div>
  

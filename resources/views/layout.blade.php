@@ -122,14 +122,36 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-                    <ul class="navbar-nav">
+                    {{-- <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="/user-login"><i class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Sign Up</a>
                         </li>
+                    </ul> --}}
+
+                    <ul class="navbar-nav">
+                        @if($authUser)
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                    <i class="fas fa-user"></i> {{ $authUser->first_name }} {{ $authUser->last_name }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="/user-dashboard">Dashboard</a>
+                                    <a class="dropdown-item" href="/logout">Logout</a>
+                                </div>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Sign Up</a>
+                            </li>
+                        @endif
                     </ul>
+                    
                 </div>
             </div>
         </nav>

@@ -23,6 +23,9 @@ class CreateSubmissions extends Migration
             $table->longText('abstract');
             $table->string('corresponding_email');
             $table->text('file');
+            $table->text('file_original_name');
+            // $table->text('date');
+            $table->text('status');
 
             $table->timestamps();
         });
