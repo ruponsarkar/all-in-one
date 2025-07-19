@@ -1,12 +1,12 @@
 <div>
 
     <a href="/" class="btn btn-block"><i class="fas fa-home"></i> Home</a>
-    <a href="/current/MRSJMRS" class="btn btn-block"><i class="fas fa-newspaper"></i> Current Issue</a>
-    <a href="/editorial-board/MRSJMRS" class="btn btn-block"><i class="fas fa-users"></i> Editorial Board</a>
+    <a href="/current/jit" class="btn btn-block"><i class="fas fa-newspaper"></i> Current Issue</a>
+    <a href="/editorial-board/jit" class="btn btn-block"><i class="fas fa-users"></i> Editorial Board</a>
     <a href="/guidelines" class="btn btn-block"><i class="fas fa-book"></i> Guidelines</a>
-    <a href="/indexed-abstract/MRSJMRS" class="btn btn-block"><i class="fas fa-search"></i> Indexing & Abstracting</a>
+    <a href="/indexed-abstract/jit" class="btn btn-block"><i class="fas fa-search"></i> Indexing & Abstracting</a>
     <a href="/about-jit" class="btn btn-block"><i class="fas fa-info-circle"></i> About</a>
-    <a href="/archive/MRSJMRS" class="btn btn-block"><i class="fas fa-archive"></i> Archive</a>
+    <a href="/archive/jit" class="btn btn-block"><i class="fas fa-archive"></i> Archive</a>
     <a href="/faq" class="btn btn-block"><i class="fas fa-question"></i> FAQ</a>
     <a href="/contact-us" class="btn btn-block"><i class="fas fa-phone"></i> Contact Us</a>
 

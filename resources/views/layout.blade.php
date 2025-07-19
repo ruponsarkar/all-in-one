@@ -122,14 +122,36 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+                    {{-- <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Sign Up</a>
+                        </li>
+                    </ul> --}}
+
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register"><i class="fas fa-sign-in-alt"></i> Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/submission"><i class="fas fa-user-plus"></i> Sign Up</a>
-                        </li>
+                        @if($authUser)
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                    <i class="fas fa-user"></i> {{ $authUser->first_name }} {{ $authUser->last_name }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="/user-dashboard">Dashboard</a>
+                                    <a class="dropdown-item" href="/logout">Logout</a>
+                                </div>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Sign Up</a>
+                            </li>
+                        @endif
                     </ul>
+                    
                 </div>
             </div>
         </nav>
@@ -142,7 +164,9 @@
 
     <!-- navbar -->
     {{-- <div class="container-fluid"> --}}
-    @yield('content')
+        <div style="min-height: 80vh">
+            @yield('content')
+        </div>
     {{-- </div> --}}
 
 
@@ -167,6 +191,17 @@
                 All articles of this open access journal are licensed under the
                 <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0</a>
             </p>
+            <p>
+                <a href="/admin-login">Admin Login</a>
+            </p>
+        </div>
+
+        <div>
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> Pharmadico Publishers. All rights reserved.
+            </p>
+        </div>
+        <div>
+            <p>Developed by: <a href="https://pageuptechnologies.com">PageUp Technologies</a></p>
         </div>
     </div>
 

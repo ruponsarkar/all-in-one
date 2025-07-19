@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use App\Models\home_asset;
-use DB;
+use Tymon\JWTAuth\Facades\JWTAuth;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,13 +25,21 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $HomeAssets = DB::table('home_assets')->where('active', 1)->first();
-        // $HomeAssets = DB::table('home_assets')->where('active', 1)->first();
-
-        View::share([
-            'logo' => $HomeAssets->logo,
-            // 'banner' => $HomeAssets->banner
-        ]);
-        // View::share();
+        View::composer('*', function ($view) {
+            try {
+                $user = auth()->user();
+    
+                if (!$user) {
+                    $token = request()->cookie('jwt_token');
+                    if ($token) {
+                        $user = JWTAuth::setToken($token)->authenticate();
+                    }
+                }
+    
+                $view->with('authUser', $user);
+            } catch (\Exception $e) {
+                $view->with('authUser', null);
+            }
+        });
     }
 }
