@@ -21,7 +21,7 @@ class JITController extends Controller
         $journal = DB::table('journals')->where('slug', $slug)->first();
 
         $Chief_editors = DB::table('editors_data')->select(['image', 'name', 'university', 'details', 'profile'])
-            ->where('type', '=', 'chief')
+            ->where('type', '=', 'Chief Editor')
             ->where('j_id', '=', $journal->j_id)
             ->where('active', '=', 1)
             ->get();
@@ -134,5 +134,17 @@ class JITController extends Controller
     {
 
         return view('JIT.about');
+    }
+    function view($slug)
+    {
+        $article = DB::table('article')
+            ->join('issues', 'issues.id', '=', 'article.i_id')
+            ->join('volume', 'volume.id', '=', 'issues.v_id')
+            ->join('journals', 'journals.j_id', '=', 'volume.j_id')
+            ->where('article.slug', $slug)
+            ->select('*', 'article.name as name', 'article.id as airticle_id')
+            ->first();
+
+        return view('JIT.viewArticle', ['article' => $article]);
     }
 }

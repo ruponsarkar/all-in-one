@@ -90,7 +90,7 @@
                   <div class="form-group row p-1">
                     <label class="col-sm-4 col-form-label">Profile Link:</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="profile" required="required" placeholder="Profile Link">
+                      <input type="text" class="form-control" name="profile" placeholder="Profile Link">
                     </div>
                   </div>
                   

@@ -191,6 +191,17 @@
                 All articles of this open access journal are licensed under the
                 <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0</a>
             </p>
+            <p>
+                <a href="/admin-login">Admin Login</a>
+            </p>
+        </div>
+
+        <div>
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> Pharmadico Publishers. All rights reserved.
+            </p>
+        </div>
+        <div>
+            <p>Developed by: <a href="https://pageuptechnologies.com">PageUp Technologies</a></p>
         </div>
     </div>
 

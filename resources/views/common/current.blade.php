@@ -42,7 +42,7 @@
                                                 <p><strong>Abstract:</strong> {{ Str::limit($article->abstract, 300) }}</p>
                                             @endif --}}
                                             <p><strong>Pages:</strong> {{ $article->page ?? 'N/A' }}</p>
-                                            <p><strong>DOI:</strong> {{ $article->doi ?? 'N/A' }}</p>
+                                            <p><strong>DOI:</strong> <a href="/view/{{$article->slug}}"> {{ $article->doi ?? 'N/A' }} </a></p>
     
                                             @if (!empty($article->file))
                                                 <a href="{{ asset('storage/' . $article->file) }}" target="_blank"

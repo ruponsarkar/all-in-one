@@ -85,7 +85,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-xl-6">
+            {{-- <div class="col-md-6 col-xl-6">
                 <div class="card daily-sales">
                     <div class="card-block">
                         <h6 class="mb-4">Change Logo</h6>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             {{-- <div class="col-md-6 col-xl-6">
                 <div class="card daily-sales">
                     <div class="card-block">

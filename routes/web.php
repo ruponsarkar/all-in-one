@@ -38,6 +38,7 @@ Route::get('archive/{slug}', [JITController::class, 'archive']);
 Route::get('issues/{slug}/{vol}', [JITController::class, 'issues'])->name('issues.all');
 Route::get('current/{slug}', [JITController::class, 'issues'])->name('issues.current');
 
+Route::get('view/{slug}', [JITController::class, 'view']);
 
 // Route::get('editorial-board', function () {
 //     return view('JIT.editorial-board');
@@ -150,7 +151,7 @@ Route::get('view-manuscript/{id}', [IndexController::class,'viewmanuscript'])->w
 
 Route::group(['middleware'=>['AuthCheck']], function(){
     
-    // Route::get('login', [adminPanelController::class, 'login']);
+    Route::get('admin-login', [adminPanelController::class, 'login']);
     Route::get('admin_index', [adminPanelController::class, 'adminIndex']);
     Route::get('all-manuscript', [adminPanelController::class, 'allManuscript']);
     Route::get('receive-editors', [adminPanelController::class, 'allEditorsRequest']);
