@@ -17,7 +17,7 @@
 
                         <div class="col-lg-12 py-3">
                             <div class="border  rounded p-3 shadow-lg">
-                                <a href="/issues/MRSJMRS/{{$ar->short}}">
+                                <a href="/issues/jit/{{$ar->short}}">
                                     <strong>
                                       {{$ar->name}}
                                     </strong>

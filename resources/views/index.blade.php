@@ -57,7 +57,7 @@
                                     <p class="card-text">
                                         <span class="badge badge-info p-2">
                                             <i class="fas fa-link"></i>
-                                            <a href={{ URL('/articles/' . $data->file) }}
+                                            <a href="/view/{{$data->slug}}"
                                                 class="text-white text-decoration-none">
                                                 {{ $data->doi }}
                                             </a>

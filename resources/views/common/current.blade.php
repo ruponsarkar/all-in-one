@@ -45,7 +45,7 @@
                                             <p><strong>DOI:</strong> <a href="/view/{{$article->slug}}"> {{ $article->doi ?? 'N/A' }} </a></p>
     
                                             @if (!empty($article->file))
-                                                <a href="{{ asset('storage/' . $article->file) }}" target="_blank"
+                                                <a href="{{ asset('/assets/articles/' . $article->file) }}" target="_blank"
                                                    class="btn btn-sm btn-outline-primary">View PDF</a>
                                             @endif
                                         </li>

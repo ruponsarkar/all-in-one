@@ -243,20 +243,22 @@ class adminPanelController extends Controller
         // else{
         //     return "no";
         // }
+        $photo = null;
 
-       
+        if ($request->photo) {
+            $photo = time() . '.' . $request->photo->getClientOriginalName();
+            $request->photo->move(base_path('public_html/assets/indexing/img'), $photo);
+        }
 
-        $photo = time() . '.' . $request->photo->getClientOriginalName();
-// return $photo;
         $indexing = new indexings;
         $indexing->j_id = strip_tags($request->journal);
+        $indexing->name = strip_tags($request->name);
         $indexing->link = strip_tags($request->link);
         $indexing->img = strip_tags($photo);
         $indexing->ip_address = \Request::ip();
 
         $indexing->save();
 
-        $request->photo->move(base_path('public/assets/indexing/img'), $photo);
 
         return redirect('indexing')->with('message', 'Your request Submitted successfully');
     }
@@ -801,7 +803,7 @@ class adminPanelController extends Controller
                 'img' => $photo
             ]);
 
-            $request->photo->move(base_path('public/assets/indexing/img'), $photo);
+            $request->photo->move(base_path('public_html/assets/indexing/img'), $photo);
 
             return redirect()->back()->with('message', 'Updated');
         }
