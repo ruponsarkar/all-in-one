@@ -45,6 +45,10 @@
                                         </select>
                                     </div>
                                     <div class="one">
+                                        <label for="jname">Name</label>
+                                        <input type="text" class="form-control" name="name" id="">
+                                    </div>
+                                    <div class="one">
                                         <label for="jname">Index link</label>
                                         <input type="text" class="form-control" name="link" id="">
                                     </div>
@@ -84,7 +88,7 @@
                             <thead>
                                 <tr class="text-center">
                                     <th>SL</th>
-                                    <th>Link</th>
+                                    <th>Name</th>
                                     <th>Indexing</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
@@ -96,7 +100,10 @@
                                 @foreach($indexing->reverse() as $data)
                                 <tr>
                                     <td>{{ $loop->index+1}}</td>
-                                    <td> <a href="{{$data->link}}"> {{$data->link}}</a></td>
+                                    <td> 
+                                    {{$data->name}}
+                                    <!--<a href="{{$data->link}}"> {{$data->link}}</a>-->
+                                    </td>
                                     <td class="text-center">
                                         <img src="{{url('assets/indexing/img/'.$data->img)}}" alt="No Image" width="200">
                                     </td>

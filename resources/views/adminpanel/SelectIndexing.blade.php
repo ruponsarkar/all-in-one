@@ -50,6 +50,10 @@
                                         </select>
                                     </div>
                                     <div class="one">
+                                        <label for="jname">Name</label>
+                                        <input type="text" class="form-control" name="name" id="">
+                                    </div>
+                                    <div class="one">
                                         <label for="jname">Index link</label>
                                         <input type="text" class="form-control" name="link" id="">
                                     </div>

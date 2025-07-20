@@ -27,7 +27,7 @@ class JITController extends Controller
             ->get();
 
         $ass_editors = DB::table('editors_data')->select(['image', 'name', 'university', 'details', 'profile'])
-            ->where('type', '=', 'ass')
+            ->where('type', '=', 'Associative Editor')
             ->where('j_id', '=', $journal->j_id)
             ->where('active', '=', 1)
             ->get();
@@ -101,7 +101,7 @@ class JITController extends Controller
         }
 
         // return $issues[0];
-        if(!$issues[0]){
+        if(!$issues && !$issues[0]){
             return view('JIT.articles', ['issues' => [], 'volume' => $volume->name]);
         }
 

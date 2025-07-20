@@ -228,7 +228,7 @@
                     const row = `
                         <tr>
                             <td>${(page - 1) * limit + index + 1}</td>
-                            <td><a href="" class="btn btn-sm btn-outline-success"><img src="https://www.svgrepo.com/show/509347/download.svg" width="15px" ></a></td>
+                            <td><a href="/assets/submissions/${submission.file}" class="btn btn-sm btn-outline-success"><img src="https://www.svgrepo.com/show/509347/download.svg" width="15px" ></a></td>
                             <td>${submission.paper_title}</td>
                             <td>${submission.author_name}</td>
                             <td>${submission.corresponding_email}</td>
@@ -364,23 +364,25 @@
 
 
     function showViewModal(submission) {
-    // Fill modal with data
-    document.getElementById('view-msid').innerText = submission.msid;
-    document.getElementById('view-title').innerText = submission.paper_title;
-    document.getElementById('view-author').innerText = submission.author_name;
-    document.getElementById('view-email').innerText = submission.corresponding_email;
-    document.getElementById('view-status').innerText = submission.submission_status;
-    document.getElementById('view-date').innerText = submission.date;
-    document.getElementById('view-keywords').innerText = submission.keywords;
-    document.getElementById('view-file').innerText = submission.file_original_name;
-    document.getElementById('view-article-link').innerText = submission.article_link ?? '—';
+        // Fill modal with data
+        document.getElementById('view-msid').innerText = submission.msid;
+        document.getElementById('view-title').innerText = submission.paper_title;
+        document.getElementById('view-author').innerText = submission.author_name;
+        document.getElementById('view-email').innerText = submission.corresponding_email;
+        document.getElementById('view-status').innerText = submission.submission_status;
+        document.getElementById('view-date').innerText = submission.date;
+        document.getElementById('view-keywords').innerText = submission.keywords;
+        // document.getElementById('view-file').innerText = submission.file_original_name;
+        document.getElementById('view-file').innerHTML =
+            `<a href="/assets/submissions/${submission.file}" target="_blank">${submission.file_original_name}</a>`;
 
-    // Show modal
-    const modalEl = document.getElementById('viewModal');
-    const modal = new bootstrap.Modal(modalEl);
-    modal.show();
-}
+        document.getElementById('view-article-link').innerText = submission.article_link ?? '—';
 
+        // Show modal
+        const modalEl = document.getElementById('viewModal');
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+    }
 </script>
 
 
